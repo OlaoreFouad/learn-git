@@ -143,10 +143,7 @@
                                 <label for="state">State</label>
                                 <select id="state" v-model="order.state" class="form-control">
                                     <option value="" disabled>State</option>
-                                    <option v-bind:value="states.AL">AL</option>
-                                    <option v-bind:value="states.AR">AR</option>
-                                    <option v-bind:value="states.CA">CA</option>
-                                    <option v-bind:value="states.NV">NV</option>
+                                    <option v-for="(state, key) in states" v-bind:value="state">{{ key }}</option>
                                 </select>
                             </div>
                         </div>
